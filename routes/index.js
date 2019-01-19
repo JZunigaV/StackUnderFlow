@@ -12,4 +12,17 @@ router.get('/', (req, res)=>{
       console.log(err)
     })
 })
+
+router.get('/preguntas/:id', (req, res)=>{
+  let preguntaId = req.params.id
+  Pregunta.findOne({'_id': preguntaId})
+  .populate('user')
+  .then((pregunta)=>{
+    res.render('pregunta-detalle', { pregunta })
+  })
+  .catch((err)=>{
+    console.log(err);
+  })
+})
+
 module.exports = router;

@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const preguntaSchema = new Schema({
-    titulo: String
+    titulo: String,
+    descripcion: String
 }, 
 
 {

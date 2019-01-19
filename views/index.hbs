@@ -8,13 +8,12 @@
  <table id="preguntas">
    <tr>
      <th class="header">Últimas preguntas</th>
-     <th class="header">Usuário</th>
+  
    </tr>
    {{#each preguntas}}
    <tr>
-     <td class="pregunta"><a href="">{{this.titulo}}</a></td>
-     <td class="usuario"><a href="">{{this.usuario}}</a></td>
-     </td>
+     <td class="pregunta"><a href="/preguntas/{{this._id}}">{{this.titulo}}</a></td>
+     
    </tr>
    {{/each}}
  </table>
