@@ -1,14 +1,13 @@
 const express = require('express')
 const Pregunta = require('../models/Pregunta')
 
-const preguntaRoutes = express.Router();
+const routes = express.Router();
 
-preguntaRoutes.get('/pregunta', (req, res) => {
+routes.get('/pregunta', (req, res) => {
     res.render('post/submit-question')
 })
 
-preguntaRoutes.post('/preguntaEnviada', (req,res, next)=>{
-    
+routes.post('/preguntaEnviada', (req,res, next)=>{
     const {titulo} = req.body;
     const newPregunta = new Pregunta ({titulo}); 
     newPregunta.save()
@@ -18,8 +17,24 @@ preguntaRoutes.post('/preguntaEnviada', (req,res, next)=>{
    .catch((error)=>{
        console.log("esto es un error")
    })
+});
 
-})
+
+//Rutas de respuesta
+// routes.get("/respuesta", (req,res) => {
+//     render("")
+// });
+
+// routes.post("/respuestas", (req,res) => {
+
+// })
 
 
-module.exports = preguntaRoutes
+
+
+
+
+
+
+
+module.exports = routes
