@@ -16,7 +16,7 @@ const User         = require('./models/user')
 const flash        = require('connect-flash')
 
 mongoose
-  .connect('mongodb://localhost/passport-demo', {useNewUrlParser: true})
+  .connect('mongodb://localhost/stackoverflow', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
