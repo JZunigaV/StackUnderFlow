@@ -1,0 +1,17 @@
+
+<div class="enviarPregunta">
+    <h1>Nueva pregunta</h1>
+<form action="/preguntaEnviada" method="POST">
+ <label for="titulo">Pregunta</label>
+ <input type="text" name="titulo" value="">
+<span class="aviso">Máximo 200 caracteres</span>
+ {{#if message}}
+   <div class="error-message">
+     {{message}}
+   </div>
+ {{/if}}
+
+
+ <button class="btn btn-success" type="submit">Guardar</button>
+</form>
+ </div>

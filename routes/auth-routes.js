@@ -71,7 +71,7 @@ authRoutes.post('/login', passport.authenticate("local", {
   failureRedirect: "/login",
   failureFlash: true,
   passReqToCallback: true
-}));
+}))
 
 authRoutes.get('/private-page', ensureLogin.ensureLoggedIn(), (req, res, next)=>{
   res.render('private', { user: req.user })
