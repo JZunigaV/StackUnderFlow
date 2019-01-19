@@ -1,6 +1,5 @@
 const express = require('express')
 const Pregunta = require('../models/Pregunta')
-
 const routes = express.Router();
 
 routes.get('/pregunta', (req, res) => {
@@ -94,9 +93,6 @@ routes.get('/pregunta/edit', (req, res) => {
         .catch(err => {
             console.log(err)
         })
-})
-
-
-
+});
 
 module.exports = routes
