@@ -16,7 +16,7 @@ const User         = require('./models/user')
 const flash        = require('connect-flash')
 
 mongoose
-  .connect('mongodb://localhost/passport-demo', {useNewUrlParser: true})
+  .connect('mongodb://stack:stack1234@ds261114.mlab.com:61114/stack-underflow', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -98,5 +98,8 @@ app.use('/', index);
 
 const authRoutes = require('./routes/auth-routes')
 app.use('/', authRoutes)
+
+const postRoutes = require ('./routes/post-routes')
+app.use('/', postRoutes)
 
 module.exports = app;
