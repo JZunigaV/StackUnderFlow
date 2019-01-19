@@ -1,2 +1,22 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+
+<main class="home"><h1>Preguntas</h1>
+<div>
+ <a href="/nuevapregunta" class="btn btn-primary">Nueva Pregunta</a>
+</div>
+
+<div>
+ <table id="preguntas">
+   <tr>
+     <th class="header">Últimas preguntas</th>
+     <th class="header">Usuário</th>
+   </tr>
+   {{#each preguntas}}
+   <tr>
+     <td class="pregunta"><a href="">{{this.pregunta}}</a></td>
+     <td class="usuario"><a href="">{{this.usuario}}</a></td>
+     </td>
+   </tr>
+   {{/each}}
+ </table>
+</div>
+</main>
