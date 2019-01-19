@@ -1,8 +1,40 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  padding: 0;
+  margin: 0; }
 
 a {
   color: #00B7FF; }
+
+.navbar-nav {
+  margin-left: 5rem; }
+
+.fab {
+  margin-right: 2rem;
+  margin-left: 2rem; }
+
+.home {
+  margin: 3rem; }
+
+#preguntas {
+  margin-top: 3rem; }
+
+.header {
+  margin-right: 3rem; }
+
+.pregunta {
+  margin: 2rem; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 3rem;
+  color: #ffffff;
+  background-color: #343A40; }
+
+.enviarPregunta {
+  margin: 3rem; }
 
 /*# sourceMappingURL=style.css.map */
